@@ -1,42 +1,105 @@
-/* 1. Base Styles (Light Mode) */
 * {
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
 
+/* Light Mode (Default) */
 body {
   margin: 0;
-  background-color: #f4f4f4; /* Light grey background */
-  color: #222;               /* Darker text for better readability */
-  transition: background 0.3s, color 0.3s;
+  background-color: #f4f4f4;
+  color: #333; /* Explicitly dark text for light mode */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  background-color: #2c3e50;
+  color: white; /* Header stays dark with light text in both modes */
+  padding: 20px;
+  text-align: center;
 }
 
 section {
-  background: #ffffff;       /* Pure white for contrast */
+  background: white;
   margin: 20px;
   padding: 20px;
   border-radius: 8px;
-  color: #333;               /* Explicitly set section text color */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  color: #333; /* Forces text to be dark in light mode */
 }
 
-/* 2. Dark Mode Overrides */
-/* When the 'dark' class is added to the <body> tag */
-body.dark {
+h2 {
+  color: #2c3e50; /* Dark blue heading for light mode */
+}
+
+/* Skills list stays the same in both modes */
+.skills-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.skills-list li {
+  background: #3498db;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  list-style: none;
+}
+
+/* Form Styling */
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  background: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background: #2c3e50;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #ddd;
+  color: #333;
+}
+
+/* --- Dark Mode Overrides --- */
+
+.dark {
   background-color: #121212;
-  color: #f4f4f4;            /* Light text for dark background */
+  color: #f4f4f4; /* Light text for dark mode */
 }
 
 .dark section {
-  background: #1e1e1e;       /* Dark grey section */
-  color: #f4f4f4;            /* Light text inside section */
+  background: #1e1e1e;
+  color: #f4f4f4; /* Light text inside sections */
+}
+
+.dark h2 {
+  color: #3498db; /* Brighter blue so it stands out on dark bg */
 }
 
 .dark header {
   background: #000;
 }
 
+.dark form input,
+.dark form textarea {
+  background: #333;
+  color: #fff;
+  border: 1px solid #444;
+}
+
 .dark footer {
   background: #222;
-  color: #bbb;
+  color: #888;
 }
