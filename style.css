@@ -12,7 +12,7 @@ html {
 
 body {
   background: #f7f6f3;
-  color: #2f3e34;
+  color: #f6f8f7;
   transition: 0.3s;
   padding-bottom: 40px;
 }
@@ -23,7 +23,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background: #e3eadf;
+  background: #6b9071;
   position: sticky;
   top: 0;
   z-index: 100;
